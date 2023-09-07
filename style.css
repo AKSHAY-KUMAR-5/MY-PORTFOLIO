@@ -261,7 +261,7 @@
 
 }
 .card{
-   background-image: url(images/humanrobot.jpg);
+   background-image: url(humanrobot.jpg);
     box-shadow: rgba(87, 90, 90, 0.56) 0px 22px 70px 10px;
     width: 30rem;
     height: 30rem;
@@ -307,7 +307,7 @@
 }
 
 .card2{
-    background-image: url(images/cnc.webp);
+    background-image: url(cnc.webp);
      box-shadow: rgba(87, 90, 90, 0.56) 0px 22px 70px 10px;
      width: 30rem;
      height: 30rem;
@@ -352,7 +352,7 @@
  }
 
 .card3{
-    background-image: url(images/linerobot.jpg);
+    background-image: url(linerobot.jpg);
      box-shadow: rgba(87, 90, 90, 0.56) 0px 22px 70px 10px;
      width: 30rem;
      height: 30rem;
@@ -396,7 +396,7 @@
  }
 
  .card4{
-    background-image: url(images/leddisplay.jpg);
+    background-image: url(leddisplay.jpg);
      box-shadow: rgba(87, 90, 90, 0.56) 0px 22px 70px 10px;
      width: 30rem;
      height: 30rem;
