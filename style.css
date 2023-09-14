@@ -17,6 +17,14 @@
     box-sizing: border-box;
     background-color: var(--bg-color);
     font-family: 'Montserrat', sans-serif;
+    
+}
+
+body{
+    ::-webkit-scrollbar{
+        width: 10px;
+
+    }
 }
 
 .nav{
@@ -26,14 +34,12 @@
     justify-content: space-between;
 
 }
-.nav .menu{
-    display: none;
-}
+
 .nav-l{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 0.8rem;
 }
 .nav-l img{
     width: 70px;
@@ -44,6 +50,9 @@
 .nav h1{
     color: var(--text-color);
     letter-spacing: 0.2rem;
+}
+.cardnav{
+    display: none;
 }
 
 .nav ul li{
@@ -74,9 +83,61 @@
 .nav ul li a:hover::after{
     width: 100%;
 }
-.menubar{
+.menubtn{
     display: none;
 }
+
+.menumob{
+   display: none;
+   
+}
+/*.menumob ul li{
+    list-style: none;
+    padding: 10px;
+    background: transparent;
+    margin: 10px;
+}
+.menumob ul li a{
+    color: #fff;
+    text-decoration: none;
+    background: transparent;
+    font-size: 1.2rem;
+}
+.menumob.active{
+    display: block;
+    display: flex;
+    flex-direction: column;
+    float: right;
+    justify-content: center;
+    background-color: rgba(0, 255, 255, 0.482);
+    width: 200px;
+    height: 300px;
+    border: #00fff2 solid 3px;
+    backdrop-filter: blur(10px);
+    margin-right: 20px;
+} */
+/* 
+#menubar{
+    display: none;
+    width: 10rem;
+ }
+ 
+#menubar ul li{
+    align-items: end;
+    display: flex;
+    flex-direction: column;
+   list-style: none;
+   margin: 0 2rem;
+   background-color: rgba(0, 255, 255, 0.382);
+   position: relative;
+   
+}
+#menubar ul li a{
+    color: var(--text-color);
+    background-color: var(--con-bg);
+    text-decoration: none;
+    font-weight: 500;
+} */
 .banner{
     padding: var(--padding);
     display: flex;
@@ -98,7 +159,7 @@
     background-color: var(--con-bg);
     color: var(--text-color);
     font-weight: 600;
-    position: relative;
+    
 }
 
 .left #name{
@@ -165,6 +226,7 @@
 }
 .right img{
     width: 450px;
+    position: relative;
 }
 .custom-cursor{
     width: 40px;
@@ -261,7 +323,7 @@
 
 }
 .card{
-   background-image: url(humanrobot.jpg);
+   background-image: url(images/humanrobot.jpg);
     box-shadow: rgba(87, 90, 90, 0.56) 0px 22px 70px 10px;
     width: 30rem;
     height: 30rem;
@@ -307,7 +369,7 @@
 }
 
 .card2{
-    background-image: url(cnc.webp);
+    background-image: url(images/cnc.webp);
      box-shadow: rgba(87, 90, 90, 0.56) 0px 22px 70px 10px;
      width: 30rem;
      height: 30rem;
@@ -352,7 +414,7 @@
  }
 
 .card3{
-    background-image: url(linerobot.jpg);
+    background-image: url(images/linerobot.jpg);
      box-shadow: rgba(87, 90, 90, 0.56) 0px 22px 70px 10px;
      width: 30rem;
      height: 30rem;
@@ -396,7 +458,7 @@
  }
 
  .card4{
-    background-image: url(leddisplay.jpg);
+    background-image: url(images/leddisplay.jpg);
      box-shadow: rgba(87, 90, 90, 0.56) 0px 22px 70px 10px;
      width: 30rem;
      height: 30rem;
@@ -601,6 +663,9 @@
     .right img{
         width: 400px;
     }
+    .about{
+        padding-right: 0rem;
+    }
     .about-l img{
         border: #00fff2 3px ;
         border-radius: 2rem;
@@ -614,7 +679,7 @@
         line-height: 8rem;
     }
     .about-r p{
-       
+          
         font-size: 1rem;
         line-height: 2rem;
     }
@@ -735,22 +800,37 @@
        
     }
     .contact .inputs img{
-       
-        left: 87% ;
+       left: 80%;
     
     }
-     }
 
-     @media (max-width: 1099px){
+ }
 
+     @media (max-width: 1440px){
+        .nav{
+            padding-right: 10rem;
+        }
+        .nav ul li{
+        
+           margin: 0 1rem;
+           background-color: var(--con-bg);
+            position: relative;
+        }
+        .nav ul li a{
+            color: var(--text-color);
+            background-color: var(--con-bg);
+            text-decoration: none;
+            font-weight: 500;
+        }
         .nav-l img{
-            width: 60px;
-            height: 60px;
+            width: 40px;
+            height: 40px;
             
         }
+       
         .nav h1{
             letter-spacing: 0.2rem;
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
         .banner .left{
             margin: 6rem 2rem;
@@ -769,7 +849,7 @@
         
         }
         .right{
-            margin-left: 10rem;
+            margin-left: 20rem;
         }
         .right img{
             width: 300px;
@@ -785,14 +865,19 @@
            
             font-size: 2rem;
             line-height: 8rem;
+            
         }
         .about-r p{
            
             font-size: 1rem;
             line-height: 1.5rem;
+            padding-right: 10rem;
         }
     .projects h1{
         font-size: 3rem;
+    }
+    .skills{
+        padding: 0rem 5rem;
     }
     .skills h1{
         font-size: 3rem;
@@ -801,10 +886,8 @@
         font-size: 1.5rem;
     }
     .skills .row1 .items{
-    
-    
         padding: 1rem;
-       
+        max-width: 25rem; 
      }
      .skills .row1 .items img{
         width: 100px;
@@ -846,236 +929,446 @@
         width: 10rem;
         font-size: 1rem; 
      }
+     .card{
+           
+        width: 20rem;
+        height: 30rem;
+        border-radius: 2rem;
+     
+        margin: 0rem 2rem;
+       
+        
+    }
     
+    .card h3{
+    
+        font-size: 1.5rem;
+    
+        width:20rem ;
+       
+        height: 6rem;
+        
+    
+    }
+    .card button{
+         padding: 1rem;
+         font-size: 1rem;
+         border-radius: 0.5rem;
+         margin: 0.8rem;
+       
+    }
+     
+    .card2{
+           
+        width: 20rem;
+        height: 30rem;
+        border-radius: 2rem;
+     
+        margin: 0rem 2rem;
+       
+        
+    }
+    
+    .card2 h3{
+    
+        font-size: 1.5rem;
+    
+        width:20rem ;
+       
+        height: 6rem;
+        
+    
+    }
+    .card2 button{
+         padding: 1rem;
+         font-size: 1rem;
+         border-radius: 0.5rem;
+         margin: 0.8rem;
+       
+    }
+
+       
+    .card3{
+           
+        width: 20rem;
+        height: 30rem;
+        border-radius: 2rem;
+     
+        margin: 0rem 2rem;
+       
+        
+    }
+    
+    .card3 h3{
+    
+        font-size: 1.5rem;
+    
+        width:20rem ;
+       
+        height: 6rem;
+        
+    
+    }
+    .card3 button{
+         padding: 1rem;
+         font-size: 1rem;
+         border-radius: 0.5rem;
+         margin: 0.8rem;
+       
+    }
+      
+    .card4{
+           
+        width: 20rem;
+        height: 30rem;
+        border-radius: 2rem;
+     
+        margin: 2rem 0rem;
+       
+        
+    }
+    
+    .card4 h3{
+    
+        font-size: 1.5rem;
+    
+        width:20rem ;
+       
+        height: 6rem;
+        
+    
+    }
+    .card4 button{
+         padding: 1rem;
+         font-size: 1rem;
+         border-radius: 0.5rem;
+         margin: 0.8rem;
+       
+    } 
+    .contact .inputs img{
+        
+        left: 73% ;
+        
+      
+     }
  }     
  
  @media (max-width: 820px){
    
+   
+    .nav{
+        padding: 2rem 2rem;
+    }
+        .nav-l img{
+            width: 40px;
+            height: 40px;
+            
+        }
+        .nav h1{
+            letter-spacing: 0.2rem;
+            font-size: 1.3rem;
+        }
+        .banner{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .banner .left{
+            margin: 0rem;
+            max-width: 100rem;
+            
+            
+        }
+        .left span{
+            font-size: 2rem;
+           
+        }
+        .left #name{
+            font-size: 2rem;
+        }
+        .left .dynamictxt{
+            font-size: 2rem;
+        
+        }
+        .left h3{
+            font-size: 1.5rem;
+        }
+        .right{
+            margin-left: 1rem;
+        }
+        .right img{
+            width: 400px;
+        }
+        .about{
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+        }
+        .about-r{
+            background-color: transparent;
+        }
+        .about-l img{
+           
+            width: 400px;
+            box-shadow: rgba(0, 255, 255, 0.56) 0px 22px 70px 8px;
+        }
+        
+        .about-r h1{
+           margin-top:4rem ;
+            font-size: 2.5rem;
+            line-height: 5rem;
+            background-color: transparent;
+        }
+        .about-r p{
+            background-color: transparent;
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+    .projects h1{
+        font-size: 2.5rem;
+        line-height: 2rem;
+    }
+    .project-info{
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+    }
+    
+    .card{
+           
+        width: 30rem;
+        height: 40rem;
+        border-radius: 2rem;
+     
+        margin: 2rem 0rem;
+       
+        
+    }
+    
+    .card h3{
+    
+        font-size: 2rem;
+    
+        width:20rem ;
+       
+        height: 7rem;
+        
+    
+    }
+    .card button{
+         padding: 1rem;
+         font-size: 1rem;
+         border-radius: 0.5rem;
+         margin: 0.8rem;
+       
+    }
+     
+    .card2{
+           
+        width: 30rem;
+        height: 40rem;
+        border-radius: 2rem;
+     
+        margin: 2rem 0rem;
+       
+        
+    }
+    
+    .card2 h3{
+    
+        font-size: 2rem;
+    
+        width:20rem ;
+       
+        height: 7rem;
+        
+    
+    }
+    .card2 button{
+         padding: 1rem;
+         font-size: 1rem;
+         border-radius: 0.5rem;
+         margin: 0.8rem;
+       
+    }
 
-    .nav-l img{
-        width: 40px;
-        height: 40px;
+       
+    .card3{
+           
+        width: 30rem;
+        height: 40rem;
+        border-radius: 2rem;
+     
+        margin: 2rem 0rem;
+       
         
     }
-    .nav h1{
-        letter-spacing: 0.2rem;
-        font-size: 1.3rem;
+    
+    .card3 h3{
+    
+        font-size: 2rem;
+    
+        width:20rem ;
+       
+        height: 7rem;
+        
+    
     }
-    .banner .left{
-        margin: 6rem 2rem;
-        max-width: 60rem;
+    .card3 button{
+         padding: 1rem;
+         font-size: 1rem;
+         border-radius: 0.5rem;
+         margin: 0.8rem;
+       
+    }
+      
+    .card4{
+           
+        width: 30rem;
+        height: 40rem;
+        border-radius: 2rem;
+     
+        margin: 2rem 0rem;
+       
         
     }
-    .left span{
-        font-size: 2rem;
-       
-    }
-    .left #name{
-        font-size: 2rem;
-    }
-    .left .dynamictxt{
+    
+    .card4 h3{
+    
         font-size: 2rem;
     
-    }
-    .right{
-        margin-left: 1rem;
-    }
-    .right img{
-        width: 250px;
-    }
-    .about-l img{
+        width:20rem ;
        
-        width: 300px;
-    }
+        height: 7rem;
+        
     
-    .about-r h1{
+    }
+    .card4 button{
+         padding: 1rem;
+         font-size: 1rem;
+         border-radius: 0.5rem;
+         margin: 0.8rem;
        
-        font-size: 2rem;
+    } 
+    
+    .skills h1{
+        font-size: 2.5rem;
         line-height: 5rem;
     }
-    .about-r p{
-       
+    .skills h2{
         font-size: 1rem;
-        line-height: 1.5rem;
+        background-color: transparent;
+        
     }
-.projects h1{
-    font-size: 2.5rem;
-}
-.card{
+    .skills .row1{
+    
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+        padding: 0rem;
        
-    width: 15rem;
-    height: 20rem;
-    border-radius: 2rem;
- 
-    margin: 0rem 1rem;
-   
+     }
+     .skills .row1 .items{
+        max-width: 30rem;
+        padding: 0rem;
+        width: 25rem;
+     }
+     
+     .skills .row1 .items img{
+        width: 100px;
+        margin-bottom: 2rem;
+        
+     }
+     .skills .row1 .items p{
+       font-size: 1rem;
+       margin-bottom: 1rem;
+       
+     }
+     .skills h2::after{
+       
+        width: 60%;
+      
+     }
+     .contact h1{
+       
+        font-size: 2rem;
+        margin-bottom: 2rem;
+     }
+     .contact .inputs img{
+       
+        left: 80% ;
     
-}
-
-.card h3{
-
-    font-size: 1rem;
-
-    width:15rem ;
-   
-    height: 5rem;
-    
-
-}
-.card button{
-     padding: 0.5rem;
-     font-size: 0.5rem;
-     border-radius: 0.5rem;
-     margin: 0.8rem;
-   
-}
-
-.card2{
-  
-   width: 15rem;
-   height: 20rem;
-   border-radius: 2rem;
-
-   margin: 0rem 1rem;
-  
-   
-}
-
-.card2 h3{
-
-   font-size: 1rem;
-
-   width:15rem ;
-  
-   height: 5rem;
-   
-
-}
-.card2 button{
-    padding: 0.5rem;
-    font-size: 0.5rem;
-    border-radius: 0.5rem;
-    margin: 0.8rem;
-  
-}
-
-.card3{
-  
-   width: 15rem;
-   height: 20rem;
-   border-radius: 2rem;
-
-   margin: 0rem 1rem;
-  
-   
-}
-
-.card3 h3{
-
-   font-size: 1rem;
-
-   width:15rem ;
-  
-   height: 5rem;
-   
-
-}
-.card3 button{
-    padding: 0.5rem;
-    font-size: 0.5rem;
-    border-radius: 0.5rem;
-    margin: 0.8rem;
-  
-}
-
-.card4{
-  
-   width: 15rem;
-   height: 20rem;
-   border-radius: 2rem;
-
-   margin: 3rem 1rem;
-  
-   
-}
-
-.card4 h3{
-
-   font-size: 1rem;
-
-   width:15rem ;
-  
-   height: 5rem;
-   
-
-}
-.card4 button{
-    padding: 0.5rem;
-    font-size: 0.5rem;
-    border-radius: 0.5rem;
-    margin: 0.8rem;
-  
-}
-
-.skills h1{
-    font-size: 2.5rem;
-}
-.skills h2{
-    font-size: 1rem;
-}
-.skills .row1 .items{
-
-
-    padding: 1rem;
-   
- }
- .skills .row1 .items img{
-    width: 100px;
-    margin-bottom: 2rem;
-    
- }
- .skills .row1 .items p{
-   font-size: 0.8rem;
- }
- .contact h1{
-   
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
- }
- .contact .inputs img{
-   
-    left: 80% ;
-
-}
-.contact .inputs input{
-  width: 40rem;
- 
- }
- .contact .inputs textarea{
-    width: 40rem;  
- }
- .contact button{
-    padding: 1rem;
-    width: 10rem;
-    font-size: 1rem; 
- }
-
-}     
-
-
-@media (max-width: 412px){
-   
-.nav{
-    padding: 2rem 2rem;
-}
-    .nav-l img{
+    }
+    .contact .inputs input{
+      width: 40rem;
+     
+     }
+     .contact .inputs textarea{
+        width: 40rem;  
+     }
+     .contact button{
+        padding: 1rem;
+        width: 10rem;
+        font-size: 1rem; 
+     }
+     .nav ul{
+        display: none;
+     }
+     .menubtn{
+        display: block;
         width: 40px;
         height: 40px;
+        cursor: pointer;
+    }
+    .menumob{
+       display: none;
+       background-color: transparent;
+    }
+    .menumob ul li{
+        list-style: none;
+        padding: 10px;
+        margin: 10px;
+        background-color: transparent;
+    }
+    .menumob ul li a{
+        color: #fff;
+        text-decoration: none;
+        background: transparent;
+        font-size: 1.2rem;
+        cursor: pointer;
+        font-weight: 700;
+    }
+    .menumob.active{
+        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 200px;
+        height: 300px;
+        border: #00fff2 solid 3px;
+        background-color: transparent;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        margin-right: 20px;
+        position: absolute;
+        left: 550px;
+    }
+ }
+@media (max-width: 420px){
+   
+
+    .nav-l img{
+        width: 30px;
+        height: 30px;
         
     }
     .nav h1{
-        letter-spacing: 0.2rem;
-        font-size: 1.3rem;
+        letter-spacing: 0.1rem;
+        font-size: 1rem;
     }
     .banner{
         display: flex;
@@ -1090,32 +1383,37 @@
         
     }
     .left span{
-        font-size: 2rem;
+        font-size: 1rem;
        
     }
     .left #name{
-        font-size: 2rem;
+        font-size: 1rem;
     }
     .left .dynamictxt{
-        font-size: 2rem;
+        font-size: 1rem;
     
     }
     .left h3{
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
     .right{
         margin-left: 1rem;
     }
     .right img{
-        width: 300px;
+        width: 250px;
     }
     .about{
         display: flex;
         flex-direction: column;
         padding: 2rem;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
     }
     .about-r{
         background-color: transparent;
+        padding-left: 6rem;
+        width: 30rem;
     }
     .about-l img{
        
@@ -1131,11 +1429,12 @@
     }
     .about-r p{
         background-color: transparent;
-        font-size: 0.8rem;
+        font-size: 0.7rem;
         line-height: 1.2rem;
+        width: 28rem;
     }
 .projects h1{
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 2rem;
 }
 .project-info{
@@ -1151,18 +1450,17 @@
        
     width: 20rem;
     height: 30rem;
-    border-radius: 2rem;
- 
+    border-radius: 1.5rem;
+    overflow: hidden;
     margin: 2rem 0rem;
    
     
 }
 
 .card h3{
+    font-size: 1rem;
 
-    font-size: 1.5rem;
-
-    width:20rem ;
+    width: 20rem;
    
     height: 5rem;
     
@@ -1176,11 +1474,10 @@
    
 }
 .card2{
-       
     width: 20rem;
     height: 30rem;
-    border-radius: 2rem;
- 
+    border-radius: 1.5rem;
+    overflow: hidden;
     margin: 2rem 0rem;
    
     
@@ -1188,9 +1485,9 @@
 
 .card2 h3{
 
-    font-size: 1.5rem;
+    font-size: 1rem;
 
-    width:20rem ;
+    width: 20rem;
    
     height: 5rem;
     
@@ -1204,11 +1501,10 @@
    
 }
 .card3{
-       
     width: 20rem;
     height: 30rem;
-    border-radius: 2rem;
- 
+    border-radius: 1.5rem;
+    overflow: hidden;
     margin: 2rem 0rem;
    
     
@@ -1216,9 +1512,9 @@
 
 .card3 h3{
 
-    font-size: 1.5rem;
+    font-size: 1rem;
 
-    width:20rem ;
+    width: 20rem;
    
     height: 5rem;
     
@@ -1235,8 +1531,8 @@
        
     width: 20rem;
     height: 30rem;
-    border-radius: 2rem;
- 
+    border-radius: 1.5rem;
+   overflow: hidden;
     margin: 2rem 0rem;
    
     
@@ -1244,9 +1540,9 @@
 
 .card4 h3{
 
-    font-size: 1.5rem;
+    font-size: 1rem;
 
-    width:20rem ;
+    width: 20rem;
    
     height: 5rem;
     
@@ -1306,54 +1602,308 @@
  }
  .contact .inputs img{
    
-    left: 75% ;
+    left: 65% ;
 
 }
 .contact .inputs input{
-  width: 20rem;
+  width: 15rem;
  
  }
  .contact .inputs textarea{
-    width: 20rem;  
+    width: 15rem;  
  }
  .contact button{
-    padding: 1rem;
+    padding: 0.7rem;
     width: 10rem;
     font-size: 1rem; 
  }
  .nav ul{
     display: none;
  }
- .nav .menu{
+ .menubtn{
     display: block;
-    width: 2rem;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
- }
-
- .menubar{
-    display: block;
-    width: 0rem;
- }
- 
-.menubar ul li{
-    align-items: end;
-    display: flex;
-    flex-direction: column;
-   list-style: none;
-   margin: 0 2rem;
-   background-color: rgba(0, 255, 255, 0.382);
-   position: relative;
+}
+.menumob{
+   display: none;
+   background-color: transparent;
    
 }
-.menubar ul li a{
-    color: var(--text-color);
-    background-color: var(--con-bg);
+.menumob ul li{
+    list-style: none;
+    padding: 5px;
+    margin: 5px;
+    background-color: transparent;
+}
+.menumob ul li a{
+    color: #fff;
     text-decoration: none;
+    background: transparent;
+    font-size: 0.8rem;
+    cursor: pointer;
     font-weight: 500;
 }
+.menumob.active{
+    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100px;
+    height: 200px;
+    border: #00fff2 solid 3px;
+    background-color: transparent;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    left: 250px;
+}
+} 
+@media (max-width: 1024px){
+    .nav{
+        padding-right: 10rem;
+    }
+    .nav ul li{
+    
+       margin: 0 1rem;
+       background-color: var(--con-bg);
+        position: relative;
+    }
+    .nav ul li a{
+        color: var(--text-color);
+        background-color: var(--con-bg);
+        text-decoration: none;
+        font-weight: 500;
+    }
+    .nav-l img{
+        width: 40px;
+        height: 40px;
+        
+    }
+   
+    .nav h1{
+        letter-spacing: 0.2rem;
+        font-size: 1.5rem;
+    }
+    .banner .left{
+        margin: 6rem 2rem;
+        max-width: 60rem;
+        
+    }
+    .left span{
+        font-size: 2.5rem;
+       
+    }
+    .left #name{
+        font-size: 2.5rem;
+    }
+    .left .dynamictxt{
+        font-size: 2.5rem;
+    
+    }
+    .right{
+        margin-left: 20rem;
+    }
+    .right img{
+        width: 300px;
+    }
+    .about-l img{
+        border: #00fff2 3px ;
+        border-radius: 2rem;
+        box-shadow: rgba(0, 255, 255, 0.56) 0px 22px 70px 10px;
+        width: 400px;
+    }
+    
+    .about-r h1{
+       
+        font-size: 2rem;
+        line-height: 8rem;
+        
+    }
+    .about-r p{
+       
+        font-size: 1rem;
+        line-height: 1.5rem;
+        padding-right: 10rem;
+        width: 30rem;
+    }
 
-.menubar.open{
-    width: 0rem;
+
+.projects h1{
+    font-size: 3rem;
+}
+.skills{
+    padding: 0rem 5rem;
+}
+.skills h1{
+    font-size: 3rem;
+}
+.skills h2{
+    font-size: 1.5rem;
+}
+.skills .row1 .items{
+    padding: 1rem;
+    max-width: 25rem; 
+ }
+ .skills .row1 .items img{
+    width: 100px;
+    margin-bottom: 2rem;
+    
+ }
+ .skills .row1 .items p{
+   font-size: 0.8rem;
+ }
+ .contact h1{
+   
+    font-size: 3rem;
+    margin-bottom: 2rem;
+ }
+ .contact .inputs img{
+   
+    left: 100% ;
+
+}
+.contact .inputs input{
+   
+    
+    width: 50rem;
+    
+    
+   
+   
+ }
+ .contact .inputs textarea{
+    
+   
+    width: 50rem;
+    
+    
+    
+ }
+ .contact button{
+    padding: 1rem;
+    width: 10rem;
+    font-size: 1rem; 
+ }
+ .card{
+       
+    width: 20rem;
+    height: 30rem;
+    border-radius: 2rem;
+   
+    
 }
 
+.card h3{
+
+    font-size: 1.5rem;
+
+    width:20rem ;
+   
+    height: 6rem;
+    
+
+}
+.card button{
+     padding: 1rem;
+     font-size: 1rem;
+     border-radius: 0.5rem;
+     margin: 0.8rem;
+   
+}
+ 
+.card2{
+       
+    width: 20rem;
+    height: 30rem;
+    border-radius: 2rem;
+ 
+    margin: 0rem 2rem;
+   
+    
+}
+
+.card2 h3{
+
+    font-size: 1.5rem;
+
+    width:20rem ;
+   
+    height: 6rem;
+    
+
+}
+.card2 button{
+     padding: 1rem;
+     font-size: 1rem;
+     border-radius: 0.5rem;
+     margin: 0.8rem;
+   
+}
+
+   
+.card3{
+       
+    width: 20rem;
+    height: 30rem;
+    border-radius: 2rem;
+ 
+    margin: 0rem 2rem;
+   
+    
+}
+
+.card3 h3{
+
+    font-size: 1.5rem;
+
+    width:20rem ;
+   
+    height: 6rem;
+    
+
+}
+.card3 button{
+     padding: 1rem;
+     font-size: 1rem;
+     border-radius: 0.5rem;
+     margin: 0.8rem;
+   
+}
+  
+.card4{
+       
+    width: 20rem;
+    height: 30rem;
+    border-radius: 2rem;
+ 
+    margin: 2rem 0rem;
+   
+    
+}
+
+.card4 h3{
+
+    font-size: 1.5rem;
+
+    width:20rem ;
+   
+    height: 6rem;
+    
+
+}
+.card4 button{
+     padding: 1rem;
+     font-size: 1rem;
+     border-radius: 0.5rem;
+     margin: 0.8rem;
+   
+} 
+.contact .inputs img{
+    
+    left: 73% ;
+    
+  
+ }
 }     

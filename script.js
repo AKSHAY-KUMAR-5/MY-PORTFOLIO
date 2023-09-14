@@ -19,12 +19,5 @@ $(document).ready(function () {
 });
 
 
-const toggleBtn = document.querySelector('.menu');
-const menuCont = document.querySelector('.menubar');
-
-toggleBtn.onClick = function(){
-    menuCont.classList.toggle('open');
-    
-}
 
 
